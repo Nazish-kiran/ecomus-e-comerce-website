@@ -1,0 +1,12 @@
+:root{
+    --bg-secondary-color:#ebebeb;
+}
+.bg-grey{
+    background-color: var(--bg-secondary-color);
+}
+.promotional2{
+    display: none;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
