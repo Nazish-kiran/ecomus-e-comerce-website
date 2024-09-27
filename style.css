@@ -1,12 +1,140 @@
-:root{
-    --bg-secondary-color:#ebebeb;
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Albert Sans", sans-serif;
 }
-.bg-grey{
-    background-color: var(--bg-secondary-color);
+:root {
+  --bg-secondary-color: #ebebeb;
+  --yellow:#FCFFB2;
+  --icon-hover: #dc302f;
+  --star-color: #ea7952;
 }
-.promotional2{
-    display: none;
+html {
+  font-size: 62.5%;
 }
-.cursor-pointer{
-    cursor: pointer;
+.small {
+  font-size: 1.4rem !important;
+}
+.txt-font {
+  font-size: 1.6rem !important;
+}
+.subtitle-font {
+  font-size: 2rem;
+}
+.title-font {
+  font-size: 8rem;
+  font-weight: 400 !important;
+}
+.bg-grey {
+  background-color: var(--bg-secondary-color);
+}
+.underline {
+  text-decoration: underline;
+}
+.promotional2,
+.promotional3 {
+  display: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.top {
+  height: 10vh !important;
+}
+.circ:hover {
+  color: white;
+}
+.circ1:hover {
+  background-color: #3b5998;
+}
+.circ2:hover {
+  background-color: black;
+}
+.circ3:hover {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #feda77,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+}
+.circ4:hover {
+  background: linear-gradient(#25f4ee, #000, #fe2c55);
+}
+.circ5:hover {
+  background-color: #cb2826;
+}
+/* ------------BANNER STARTS HERE----------------*/
+.banner {
+  background-image: url(assets/fashion-slideshow-01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 110vh !important;
+}
+.icons i {
+  font-size: 2.1rem !important;
+}
+.icons i:hover {
+  color: var(--icon-hover);
+}
+.banner-content {
+  padding-top: 10% !important;
+  color: black;
+}
+.banner-btn {
+  background-color: black !important;
+  color: #fff;
+}
+button {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+}
+.sheen:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(229, 172, 142, 0),
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(229, 172, 142, 0)
+  );
+  transform: rotateZ(60deg) translate(-5em, 7.5em);
+}
+.sheen:hover::after,
+button:focus::after {
+  animation: sheen 1s forwards;
+}
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+
+/* ------------BANNER ENDS HERE----------------*/
+@media screen and (min-width: 500px) and (max-width: 768.99px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 499.99px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media screen and (max-width:375.99px) {
+    html {
+        font-size: 32%;
+      }
+      .banner-content {
+        padding-top: 20% !important;
+      }
 }
