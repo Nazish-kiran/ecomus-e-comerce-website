@@ -6,12 +6,15 @@
 }
 :root {
   --bg-secondary-color: #ebebeb;
-  --yellow:#FCFFB2;
+  --yellow: #fcffb2;
   --icon-hover: #dc302f;
   --star-color: #ea7952;
 }
 html {
   font-size: 62.5%;
+}
+body {
+  color: #000 !important;
 }
 .small {
   font-size: 1.4rem !important;
@@ -120,6 +123,42 @@ button:focus::after {
 }
 
 /* ------------BANNER ENDS HERE----------------*/
+/* ------------MARQUEE STARTS HERE----------------*/
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+  font-size: 2.4rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ------------MARQUEE ENDS HERE----------------*/
+/* ------------CARD STARTS HERE----------------*/
+.card-1{
+    background-image: url(assets/card1-img.png);
+    background-size: cover;
+}
+/* ------------CARD ENDS HERE----------------*/
+
+
 @media screen and (min-width: 500px) and (max-width: 768.99px) {
   html {
     font-size: 55%;
@@ -129,12 +168,18 @@ button:focus::after {
   html {
     font-size: 40%;
   }
+  .banner {
+    height: 90vh !important;
+  }
 }
-@media screen and (max-width:375.99px) {
-    html {
-        font-size: 32%;
-      }
-      .banner-content {
-        padding-top: 20% !important;
-      }
+@media screen and (max-width: 375.99px) {
+  html {
+    font-size: 32%;
+  }
+  .banner-content {
+    padding-top: 20% !important;
+  }
+  .banner {
+    height: 70vh !important;
+  }
 }
