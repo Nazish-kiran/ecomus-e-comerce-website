@@ -156,6 +156,16 @@ button:focus::after {
     background-image: url(assets/card1-img.png);
     background-size: cover;
 }
+.card-2{
+    background-image: url(assets/card2-img.png);
+    background-size: cover;
+}
+.card-3{
+    background-image: url(assets/card3-img.png);
+    background-size: cover;
+}
+
+
 /* ------------CARD ENDS HERE----------------*/
 
 
