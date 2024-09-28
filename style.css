@@ -186,20 +186,32 @@ button:focus::after {
 }
 /* ------------CARD ENDS HERE----------------*/
 /* ------------AECTION-2 STARTS HERE----------------*/
-.card-row1 {
+.card-row {
   padding-top: 10vh !important;
 }
 .card2-1 {
   background-image: url(assets/card2-1.png);
 }
+.card2-1:hover {
+  background-image: url(assets/card2-1-hover.png);
+}
 .card2-2 {
   background-image: url(assets/card2-2.png);
+}
+.card2-2:hover {
+  background-image: url(assets/card2-2-hover.png);
 }
 .card2-3 {
   background-image: url(assets/card2-3.png);
 }
+.card2-3:hover {
+  background-image: url(assets/card2-3-hover.png);
+}
 .card2-4 {
   background-image: url(assets/card2-4.png);
+}
+.card2-4:hover {
+  background-image: url(assets/card2-4-hover.png);
 }
 /* ------------AECTION-2 ENDS HERE----------------*/
 
