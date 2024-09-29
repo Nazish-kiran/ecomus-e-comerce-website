@@ -16,6 +16,7 @@ html {
 body {
   color: #000 !important;
 }
+/* Text Size Classes */
 .small {
   font-size: 1.4rem !important;
 }
@@ -44,7 +45,7 @@ body {
   cursor: pointer;
 }
 .top {
-  height: 10vh !important;
+  height: 8vh !important;
 }
 .circ:hover {
   color: white;
@@ -177,7 +178,8 @@ button:focus::after {
 .v:hover span {
   display: inline !important;
 }
-.sec1-card .card-body:hover ,.sec2-card:hover {
+.sec1-card .card-body:hover,
+.sec2-card:hover {
   scale: 1.05;
   transition: all 1.1s;
 }
@@ -185,7 +187,10 @@ button:focus::after {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* ------------CARD ENDS HERE----------------*/
-/* ------------AECTION-2 STARTS HERE----------------*/
+/* ------------SECTION-2 STARTS HERE----------------*/
+.section-2 {
+  padding-bottom: 20vh !important;
+}
 .card-row {
   padding-top: 10vh !important;
 }
@@ -212,6 +217,54 @@ button:focus::after {
 }
 .card2-4:hover {
   background-image: url(assets/card2-4-hover.png);
+}
+.card2-5 {
+  background-image: url(assets/card2-5.png);
+}
+.card2-5:hover {
+  background-image: url(assets/card2-5-hover.png);
+}
+.card2-6 {
+  background-image: url(assets/card2-6.png);
+}
+.card2-6:hover {
+  background-image: url(assets/card2-6-hover.png);
+}
+.card2-7 {
+  background-image: url(assets/card2-7.png);
+}
+.card2-7:hover {
+  background-image: url(assets/card2-7-hover.png);
+}
+.card2-8 {
+  background-image: url(assets/card2-8.png);
+}
+.card2-8:hover {
+  background-image: url(assets/card2-8-hover.png);
+}
+.black-box {
+  height: 10%;
+  word-spacing: 10px;
+}
+.card2-1:hover .black-box,
+.card2-2:hover .black-box,
+.card2-3:hover .black-box,
+.card2-4:hover .black-box,
+.card2-5:hover .black-box,
+.card2-6:hover .black-box,
+.card2-7:hover .black-box,
+.card2-8:hover .black-box {
+  display: flex !important;
+  animation: pop 1s ease;
+  -webkit-animation: pop 1s ease;
+}
+@keyframes pop {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 10%;
+  }
 }
 /* ------------AECTION-2 ENDS HERE----------------*/
 
