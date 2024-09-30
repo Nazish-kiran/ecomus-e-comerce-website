@@ -5,6 +5,7 @@
   font-family: "Albert Sans", sans-serif;
 }
 :root {
+  --theme-pink:#f9f5f1;
   --bg-secondary-color: #ebebeb;
   --yellow: #fcffb2;
   --icon-hover: #dc302f;
@@ -46,6 +47,10 @@ body {
 }
 .top {
   height: 8vh !important;
+}
+a{
+  color: #000 !important;
+  text-decoration: none;
 }
 .circ:hover {
   color: white;
@@ -293,5 +298,11 @@ button:focus::after {
   }
   .banner {
     height: 70vh !important;
+  }
+}
+@media screen and (max-width:425px) {
+  .banner{
+    background: url(assets/graph.png);
+   background-color:var(--theme-pink);
   }
 }
