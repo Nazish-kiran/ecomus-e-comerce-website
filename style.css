@@ -243,7 +243,7 @@ button:focus::after {
   background-image: url(assets/card2-8-hover.png);
 }
 .black-box {
-  height: 10%;
+  height: 12%;
   word-spacing: 10px;
 }
 .card2-1:hover .black-box,
