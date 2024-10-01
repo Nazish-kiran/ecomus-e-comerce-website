@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ecomus</title>
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -11,29 +12,36 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Animate.css for animations -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- AOS Library for scroll animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Flag Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
     />
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="d-flex align-items-center justify-content-center">
+    <!-- Container Fluid -->
     <div class="container-fluid container-xxl">
       <!-- ----------TOP BAR STARTS HERE------------ -->
       <div
         class="top d-flex justify-content-lg-between justify-content-center align-items-center px-5"
       >
+        <!-- Social Media Icons -->
         <div class="circles d-lg-flex d-none">
           <div
             class="circ circ1 bg-grey mx-2 d-flex align-items-center rounded-circle justify-content-center p-3 cursor-pointer"
@@ -61,6 +69,7 @@
             <i class="fa-brands fa-pinterest small"></i>
           </div>
         </div>
+        <!-- Promotional Messages -->
         <div class="promotionals d-flex">
           <div class="promotional1 small fw-bold">
             Summer sale discount off 70%
@@ -75,6 +84,7 @@
             >
           </div>
         </div>
+        <!-- Currency and Language Dropdowns -->
         <div class="dropdowns d-lg-flex d-none pt-3 d-md-none">
           <div class="dropdown small">
             <p
@@ -124,14 +134,16 @@
         </div>
       </div>
       <!-- ----------TOP BAR ENDS HERE------------ -->
-      <!-- ----------BANNER STARTS HERE------------ -->
-      <!-- ----------NAVBAR STARTS HERE------------ -->
+
+      <!-- ----------BANNER AND NAVBAR STARTS HERE------------ -->
       <div class="banner px-5">
         <nav class="navbar navbar-expand-lg txt-font pt-5">
           <div class="container-fluid w-100">
+            <!-- Logo -->
             <a class="navbar-brand" href="#"
               ><img src="assets/logo.png" alt=""
             /></a>
+            <!-- Navbar Toggler for Mobile View -->
             <button
               class="navbar-toggler order-0"
               type="button"
@@ -143,6 +155,7 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav mx-auto ms-md-auto fw-bold mb-2 mb-lg-0">
                 <li class="nav-item px-3">
@@ -175,15 +188,23 @@
                 </li>
               </ul>
             </div>
+            <!-- Right Side Navbar Icons -->
             <p class="icons d-none d-lg-block txt-font">
-              <i class="fa-solid fa-magnifying-glass mx-3"></i>
-              <i class="fa-regular fa-user mx-3"></i>
-              <i class="fa-sharp fa-regular fa-heart mx-3"></i>
-              <i class="fa-solid fa-bag-shopping mx-3"></i>
+              <i
+                class="fa-solid fa-magnifying-glass mx-3 red-hover cursor-pointer"
+              ></i>
+              <i class="fa-regular fa-user mx-3 red-hover cursor-pointer"></i>
+              <i
+                class="fa-sharp fa-regular fa-heart mx-3 red-hover cursor-pointer"
+              ></i>
+              <i
+                class="fa-solid fa-bag-shopping mx-3 red-hover cursor-pointer"
+              ></i>
             </p>
           </div>
         </nav>
-        <!-- ----------NAVBAR ENDS HERE------------ -->
+
+        <!-- ----------BANNER CONTENT STARTS HERE------------ -->
         <div class="banner-content container">
           <h1 class="title-font animate__animated animate__fadeInDown">
             Glamorous <br />
@@ -196,12 +217,15 @@
           </p>
           <button
             type="button"
-            class="sheen banner-btn subtitle-font fw-semibold py-3 px-5 mt-5 animate__animated animate__fadeInUp animate__delay-1s"
+            class="sheen banner-btn subtitle-font fw-semibold py-3 px-5 mt-5 animate__animated animate__fadeInRight animate__delay-1s"
           >
-            Shop Collection
+            SHOP COLLECTION
           </button>
         </div>
+        <!-- ----------BANNER CONTENT ENDS HERE------------ -->
       </div>
+      <!-- ----------BANNER AND NAVBAR ENDS HERE------------ -->
+
       <!-- ----------BANNER ENDS HERE------------ -->
       <!-- ----------MARQUEE STARTS HERE------------ -->
       <div class="marquee-container">
@@ -300,7 +324,7 @@
           arrivals
         </p>
         <div
-          class="card-row d-flex justify-content-between gap-4 flex-wrap"
+          class="card-row d-flex gap-4 flex-wrap justify-content-center"
           data-aos="fade-up"
         >
           <div class="card-content">
@@ -317,8 +341,8 @@
               </div>
             </div>
             <div class="card-txt text-start pt-4">
-              <p class="txt-font">Ribbed Tank Top</p>
-              <p class="small">$16.95</p>
+              <p class="txt-font red-hover cursor-pointer">Ribbed Tank Top</p>
+              <p class="small fw-bold pt-2">$16.95</p>
             </div>
           </div>
           <div class="card-content">
@@ -335,8 +359,10 @@
               </div>
             </div>
             <div class="card-txt text-start pt-4">
-              <p class="txt-font">Ribbed Tank Top</p>
-              <p class="small">$16.95</p>
+              <p class="txt-font red-hover cursor-pointer">
+                Ribbed modal T-shirt
+              </p>
+              <p class="small fw-bold pt-2">From $18.95</p>
             </div>
           </div>
           <div class="card-content">
@@ -353,8 +379,10 @@
               </div>
             </div>
             <div class="card-txt text-start pt-4">
-              <p class="txt-font">Ribbed Tank Top</p>
-              <p class="small">$16.95</p>
+              <p class="txt-font red-hover cursor-pointer">
+                Oversized Printed T-shirt
+              </p>
+              <p class="small fw-bold pt-2">$10.00</p>
             </div>
           </div>
           <div class="card-content">
@@ -371,12 +399,14 @@
               </div>
             </div>
             <div class="card-txt text-start pt-4">
-              <p class="txt-font">Ribbed Tank Top</p>
-              <p class="small">$16.95</p>
+              <p class="txt-font red-hover cursor-pointer">
+                Oversized Printed T-shirt
+              </p>
+              <p class="small fw-bold pt-2">$16.95</p>
             </div>
           </div>
           <div
-            class="card-row-2 d-flex justify-content-between gap-4 flex-wrap"
+            class="card-row-2 d-flex gap-4 flex-wrap justify-content-center"
             data-aos="fade-up"
           >
             <div class="card-content">
@@ -393,8 +423,10 @@
                 </div>
               </div>
               <div class="card-txt text-start pt-4">
-                <p class="txt-font">Ribbed Tank Top</p>
-                <p class="small">$16.95</p>
+                <p class="txt-font red-hover cursor-pointer">
+                  V-neck linen T-shirt
+                </p>
+                <p class="small fw-bold pt-2">$114.95</p>
               </div>
             </div>
             <div class="card-content">
@@ -411,8 +443,10 @@
                 </div>
               </div>
               <div class="card-txt text-start pt-4">
-                <p class="txt-font">Ribbed Tank Top</p>
-                <p class="small">$16.95</p>
+                <p class="txt-font red-hover cursor-pointer">
+                  Loose Fit Sweatshirt
+                </p>
+                <p class="small fw-bold pt-2">$10.00</p>
               </div>
             </div>
             <div class="card-content">
@@ -429,8 +463,10 @@
                 </div>
               </div>
               <div class="card-txt text-start pt-4">
-                <p class="txt-font">Ribbed Tank Top</p>
-                <p class="small">$16.95</p>
+                <p class="txt-font red-hover cursor-pointer">
+                  Regular Fit Oxford Shirt
+                </p>
+                <p class="small fw-bold pt-2">$10.00</p>
               </div>
             </div>
             <div class="card-content">
@@ -447,14 +483,331 @@
                 </div>
               </div>
               <div class="card-txt text-start pt-4">
-                <p class="txt-font">Ribbed Tank Top</p>
-                <p class="small">$16.95</p>
+                <p class="txt-font red-hover cursor-pointer">
+                  Loose Fit Hoodie
+                </p>
+                <p class="small fw-bold pt-2">$9.95</p>
               </div>
             </div>
           </div>
         </div>
+        <button
+          class="btn small fw-semibold border border-black py-4 px-5 red-hover border-red"
+          type="button"
+        >
+          Load More
+        </button>
       </div>
       <!-- ----------SECTION-2 ENDS HERE------------ -->
+      <!-- ----------SECTION-3 STARTS HERE------------ -->
+      <div class="section3 text-center px-5">
+        <h2 class="fw-normal" style="font-size: 42px">Shop the look</h2>
+        <p class="txt-font pt-3 pb-5">
+          Inspire and let yourself be inspired, from one unique fashion to
+          another.
+        </p>
+        <div class="images d-flex">
+          <img
+            src="assets/sec3-img1.png"
+            class="img-fluid"
+            style="width: 50%"
+            alt=""
+          />
+          <img
+            src="assets/sec3-img2.png"
+            class="img-fluid"
+            style="width: 50%"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- ----------SECTION-3 ENDS HERE------------ -->
+      <!-- ----------SECTION-4 STARTS HERE------------ -->
+
+      <div class="section4 px-5">
+        <h2 class="fw-normal text-center" style="font-size: 42px">
+          Happy Clients
+        </h2>
+        <p class="txt-font pt-3 pb-5 text-center">
+          Hear what they say about us
+        </p>
+
+        <div class="d-flex justify-content-center">
+          <div class="row">
+            <!-- Testimonial Box 1 -->
+            <div class="col-md-4">
+              <div class="testimonial-card p-4">
+                <div class="testimonial-stars subtitle-font pb-3">★★★★★</div>
+                <h5 class="fw-semibold pb-3" style="font-size: 18px">
+                  Best Online Fashion Site
+                </h5>
+                <p style="font-size: 18px">
+                  “I always find something stylish and affordable on this web
+                  fashion site”
+                </p>
+                <p class="fw-semibold small pt-5">Robert Smith</p>
+                <p class="text-muted small pb-5">Customer from USA</p>
+                <div class="product-info d-flex align-items-center pt-4">
+                  <img src="assets/test-img1.png" alt="Product 1" />
+                  <div class="ml-3 text-left ps-4">
+                    <p class="small">Jersey thong body</p>
+                    <p class="fw-bold small">$105.95</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Box 2 -->
+            <div class="col-md-4">
+              <div class="testimonial-card p-4">
+                <div class="testimonial-stars subtitle-font pb-3">★★★★★</div>
+                <h5 class="fw-semibold pb-3" style="font-size: 18px">
+                  Great Selection and Quality
+                </h5>
+                <p style="font-size: 18px">
+                  “I love the variety of styles and the high-quality clothing on
+                  this web fashion site.”
+                </p>
+                <p class="fw-semibold small pt-5">Allen Lyn</p>
+                <p class="text-muted small pb-5">Customer from France</p>
+                <div class="product-info d-flex align-items-center pt-4">
+                  <img src="assets/test-img2.png" alt="Product 2" />
+                  <div class="ml-3 text-left ps-4">
+                    <p class="small">Cotton jersey top</p>
+                    <p class="fw-bold small">$7.95</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Box 3 -->
+            <div class="col-md-4">
+              <div class="testimonial-card p-4">
+                <div class="testimonial-stars subtitle-font pb-3">★★★★★</div>
+                <h5 class="fw-semibold pb-3" style="font-size: 18px">
+                  Best Customer Service
+                </h5>
+                <p style="font-size: 18px">
+                  “I finally found a web fashion site with stylish and
+                  flattering options in my size.”
+                </p>
+                <p class="fw-semibold small pt-5">Peter Rope</p>
+                <p class="text-muted small pb-5">Customer from USA</p>
+                <div class="product-info d-flex align-items-center pt-4">
+                  <img src="assets/test-img3.png" alt="Product 3" />
+                  <div class="ml-3 text-left ps-4">
+                    <p class="small">Ribbed modal T-shirt</p>
+                    <p class="fw-bold small">From $18.95</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="brand-box row w-100">
+          <div class="col-md-2 col-sm-4 py-3" style="width: 16.66%">
+            <img src="assets/brand1.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md-2 col-sm-4 py-3" style="width: 16.66%">
+            <img src="assets/brand2.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md-2 col-sm-4 py-3" style="width: 16.66%">
+            <img src="assets/brand3.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md-2 d-md-block d-sm-none py-3" style="width: 16.66%">
+            <img src="assets/brand4.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md-2 d-md-block d-sm-none py-3" style="width: 16.66%">
+            <img src="assets/brand5.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md-2 d-md-block d-sm-none py-3" style="width: 16.66%">
+            <img src="assets/brand6.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- ----------SECTION-4 ENDS HERE------------ -->
+      <!-- ----------SECTION-5 STARTS HERE------------ -->
+      <div class="section5 text-center px-5">
+        <h2 class="fw-normal" style="font-size: 42px">Shop Gram</h2>
+        <p class="txt-font pt-3 pb-5">
+          Inspire and let yourself be inspired, from one unique fashion to
+          another.
+        </p>
+        <div class="sec5-img d-flex gap-3">
+          <div class="img overflow-hidden">
+            <img src="assets/sec5-1.png" alt="" class="img-fluid rounded-3" />
+          </div>
+          <div class="img overflow-hidden">
+            <img src="assets/sec5-2.png" alt="" class="img-fluid rounded-3" />
+          </div>
+          <div class="img overflow-hidden">
+            <img src="assets/sec5-3.png" alt="" class="img-fluid rounded-3" />
+          </div>
+          <div class="img overflow-hidden">
+            <img src="assets/sec5-4.png" alt="" class="img-fluid rounded-3" />
+          </div>
+          <div class="img overflow-hidden">
+            <img src="assets/sec5-5.png" alt="" class="img-fluid rounded-3" />
+          </div>
+        </div>
+        <div
+          class="supports d-flex gap-5 justify-content-md-between flex-wrap px-sm-5 px-md-0"
+        >
+          <div class="p-5 rounded-4 flex-grow-1">
+            <i class="fa-solid fa-cube marquee-font pb-5"></i>
+            <h5 class="subtitle-font pb-3">Free Shipping</h5>
+            <p class="txt-font">Free shipping over order $120</p>
+          </div>
+          <div class="p-5 rounded-4 flex-grow-1">
+            <i class="fa-regular fa-credit-card marquee-font pb-5"></i>
+            <h5 class="subtitle-font pb-3">Flexible Payment</h5>
+            <p class="txt-font">Pay with Multiple Credit Cards</p>
+          </div>
+          <div class="p-5 rounded-4 flex-grow-1">
+            <i class="fa-solid fa-arrow-left-long marquee-font pb-5"></i>
+            <h5 class="subtitle-font pb-3">14 Day Returns</h5>
+            <p class="txt-font">Within 30 days for an exchange</p>
+          </div>
+          <div class="p-5 rounded-4 flex-grow-1">
+            <i class="fa-solid fa-headset marquee-font pb-5"></i>
+            <h5 class="subtitle-font pb-3">Premium Support</h5>
+            <p class="txt-font">Outstanding premium support</p>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Start -->
+      <footer class="px-5">
+        <div class="container">
+          <div class="row">
+            <!-- Logo and Contact Info Column -->
+            <div class="col-md-3 mb-4 lh-lg">
+              <img src="assets/logo.png" alt="" class="pb-5 ">
+              <p class="small pt-3">
+                Address: 1234 Fashion Street, Suite 567,<br />
+                New York, NY 10001
+              </p>
+              <p class="small">
+                Email:
+                <a
+                  href="mailto:info@fashionshop.com"
+                  class="footer-link fw-semibold"
+                  >info@fashionshop.com</a
+                >
+              </p>
+              <p class="small">
+                Phone:
+                <a href="tel:2125551234" class="footer-link fw-semibold"
+                  >(212) 555-1234</a
+                >
+              </p>
+              <a href="#" class="footer-link small">Get direction </a>
+            </div>
+
+            <!-- Help Links Column -->
+            <div class="col-md-2 mb-4">
+              <h5 class="mb-4 subtitle-font">Help</h5>
+              <ul class="list-unstyled lh-lg">
+                <li>
+                  <a href="#" class="footer-link small">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="footer-link small">Returns + Exchanges</a>
+                </li>
+                <li><a href="#" class="footer-link small">Shipping</a></li>
+                <li>
+                  <a href="#" class="footer-link small">Terms & Conditions</a>
+                </li>
+                <li><a href="#" class="footer-link small">FAQ’s</a></li>
+                <li><a href="#" class="footer-link small">Compare</a></li>
+                <li><a href="#" class="footer-link small">My Wishlist</a></li>
+              </ul>
+            </div>
+
+            <!-- About Us Links Column -->
+            <div class="col-md-2 mb-4">
+              <h5 class="mb-4 subtitle-font">About Us</h5>
+              <ul class="list-unstyled lh-lg">
+                <li><a href="#" class="footer-link small">Our Story</a></li>
+                <li><a href="#" class="footer-link small">Visit Our Store</a></li>
+                <li><a href="#" class="footer-link small">Contact Us</a></li>
+                <li><a href="#" class="footer-link small">Account</a></li>
+              </ul>
+            </div>
+
+            <!-- Newsletter Sign Up Column -->
+            <div class="col-md-5 mb-4">
+              <h5 class="mb-4 subtitle-font">Sign Up for Email</h5>
+              <p class="small">
+                Sign up to get first dibs on new arrivals, sales, exclusive
+                content, events and more!
+              </p>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control small mt-5 py-4 px-4"
+                  placeholder="Enter your email..."
+                />
+                <button class="btn btn-dark small px-4" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Bottom Row for Language and Currency -->
+          <div class="dropdowns d-lg-flex pt-3 justify-content-end">
+            <div class="dropdown small">
+              <p
+                class="dropdown-toggle px-4 cursor-pointer"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="fi fi-us"></span> USD
+              </p>
+              <ul class="dropdown-menu py-3 px-4">
+                <li>
+                  <a class="dropdown-item small" href="#">
+                    <span class="fi fi-fr"></span> EUR &#8364; | France</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item small" href="#">
+                    <span class="fi fi-de"></span> EUR &#8364; | Germany</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item small" href="#">
+                    <span class="fi fi-us"></span> USD &#36; | United States</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item small" href="#">
+                    <span class="fi fi-vn"></span> VND &#8363; | Vietnam</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="dropdown small">
+              <p
+                class="dropdown-toggle px-4 cursor-pointer"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                English
+              </p>
+              <ul class="dropdown-menu p-3 py-3">
+                <li><a class="dropdown-item small" href="#">Arabic</a></li>
+                <li><a class="dropdown-item small" href="#">Chineese</a></li>
+                <li><a class="dropdown-item small" href="#">Urdu</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+          
+      </footer>
+      <!-- Footer End -->
+
+      <!-- ----------SECTION-5 ENDS HERE------------ -->
     </div>
     <a href="https://themesflat.co/html/ecomus/index.html"></a>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

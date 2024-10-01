@@ -44,6 +44,10 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
+a {
+  color: black !important;
+  text-decoration: none;
+}
 .top {
   height: 8vh !important;
 }
@@ -83,8 +87,9 @@ body {
 .icons i {
   font-size: 2.1rem !important;
 }
-.icons i:hover {
+.red-hover:hover {
   color: var(--icon-hover);
+  border-color: var(--icon-hover) !important;
 }
 .banner-content {
   padding-top: 10% !important;
@@ -179,20 +184,29 @@ button:focus::after {
   display: inline !important;
 }
 .sec1-card .card-body:hover,
-.sec2-card:hover {
+.sec2-card:hover,
+.sec5-img .img:hover img {
   scale: 1.05;
   transition: all 1.1s;
+}
+.img:hover img {
+  filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
 }
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 /* ------------CARD ENDS HERE----------------*/
 /* ------------SECTION-2 STARTS HERE----------------*/
-.section-2 {
-  padding-bottom: 20vh !important;
+.section-2,
+.section3 {
+  padding-bottom: 15vh !important;
 }
 .card-row {
   padding-top: 10vh !important;
+}
+.card-row-2 {
+  padding-block: 8vh !important;
 }
 .card2-1 {
   background-image: url(assets/card2-1.png);
@@ -266,8 +280,50 @@ button:focus::after {
     height: 10%;
   }
 }
-/* ------------AECTION-2 ENDS HERE----------------*/
+/* ------------SECTION-2 ENDS HERE----------------*/
+/* ------------SECTION-4 STARTS HERE----------------*/
+.testimonial-stars {
+  color: var(--star-color);
+}
+.testimonial-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px !important;
+  margin: 10px !important;
+}
+.product-info {
+  border-top: 1px solid #ddd;
+}
+.brand-box {
+  border: 1px solid #ddd;
+  margin-block: 12vh !important;
+}
+.brand-box .col-md-2 {
+  border-right: 1px solid #ddd;
+}
+/* ------------SECTION-4 ENDS HERE----------------*/
+/* ------------SECTION-5 STARTS HERE----------------*/
+.section5 {
+  padding-bottom: 10vh !important;
+}
+.supports {
+  margin-top: 10vh !important;
+}
+.supports div {
+  border: 1px solid #ddd;
+}
+/* ------------SECTION-5 ENDS HERE----------------*/
+/* ------------FOOTER STARTS HERE----------------*/
+footer{
+  border-top: 2px solid #ddd;
+  padding-block: 7vh !important;
 
+}
+.footer-link:hover {
+  text-decoration: underline;
+  color: #000;
+}
+/* ------------FOOTER ENDS HERE----------------*/
 @media screen and (min-width: 500px) and (max-width: 768.99px) {
   html {
     font-size: 55%;
