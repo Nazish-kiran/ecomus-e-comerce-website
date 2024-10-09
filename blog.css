@@ -1,0 +1,13 @@
+.main-image {
+    object-fit: cover;
+    width: 100%;
+}
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+.footer {
+    margin-top: 50px;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
