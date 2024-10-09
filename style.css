@@ -5,7 +5,6 @@
   font-family: "Albert Sans", sans-serif;
 }
 :root {
-  --theme-pink: #f9f5f1;
   --bg-secondary-color: #ebebeb;
   --yellow: #fcffb2;
   --icon-hover: #dc302f;
@@ -51,10 +50,6 @@ a {
 }
 .top {
   height: 8vh !important;
-}
-footer a {
-  color: #000 !important;
-  text-decoration: none;
 }
 .circ:hover {
   color: white;
@@ -262,7 +257,7 @@ button:focus::after {
   background-image: url(assets/card2-8-hover.png);
 }
 .black-box {
-  height: 12%;
+  height: 10%;
   word-spacing: 10px;
 }
 .card2-1:hover .black-box,
@@ -354,11 +349,5 @@ footer{
   }
   .banner {
     height: 70vh !important;
-  }
-}
-@media screen and (max-width: 425px) {
-  .banner {
-    background: url(assets/graph.png);
-    background-color: var(--theme-pink);
   }
 }
