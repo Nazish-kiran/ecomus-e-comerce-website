@@ -44,10 +44,13 @@ body {
 .cursor-pointer {
   cursor: pointer;
 }
-a {
+a,
+a:visited,
+a:link {
   color: black !important;
   text-decoration: none;
 }
+/* ------------NAVBAR STARTS HERE----------------*/
 .top {
   height: 8vh !important;
 }
@@ -76,6 +79,28 @@ a {
 .circ5:hover {
   background-color: #cb2826;
 }
+.nav-link {
+  padding-bottom: 3px !important;
+  position: relative;
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg,black,black);
+  background-size: 0 2px; 
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size .3s ease-in; 
+}
+
+.nav-link:hover::before {
+  background-size: 95% 2px;
+}
+/* ------------NAVBAR ENDS HERE----------------*/
+
 /* ------------BANNER STARTS HERE----------------*/
 .banner {
   background-image: url(assets/fashion-slideshow-01.jpg);
@@ -256,6 +281,9 @@ button:focus::after {
 .card2-8:hover {
   background-image: url(assets/card2-8-hover.png);
 }
+.card-content {
+  padding-bottom: 50px !important;
+}
 .black-box {
   height: 10%;
   word-spacing: 10px;
@@ -314,10 +342,9 @@ button:focus::after {
 }
 /* ------------SECTION-5 ENDS HERE----------------*/
 /* ------------FOOTER STARTS HERE----------------*/
-footer{
+footer {
   border-top: 2px solid #ddd;
   padding-block: 7vh !important;
-
 }
 .footer-link:hover {
   text-decoration: underline;
