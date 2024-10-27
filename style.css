@@ -103,7 +103,7 @@ a:link {
 
 /* ------------BANNER STARTS HERE----------------*/
 .banner {
-  background-image: url(public/fashion-slideshow-01.jpg);
+  background-image: url(assets/fashion-slideshow-01.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -187,14 +187,14 @@ button:focus::after {
   padding-bottom: 10vw !important;
 }
 .card-1 {
-  background-image: url(public/card1-img.png);
+  background-image: url(assets/card1-img.png);
 }
 .card-2 {
-  background-image: url(public/card2-img.png);
+  background-image: url(assets/card2-img.png);
   background-position: center;
 }
 .card-3 {
-  background-image: url(public/card3-img.png);
+  background-image: url(assets/card3-img.png);
 }
 .sec1-card .card-body,
 .sec2-card {
@@ -234,52 +234,52 @@ button:focus::after {
   padding-block: 8vh !important;
 }
 .card2-1 {
-  background-image: url(public/card2-1.png);
+  background-image: url(assets/card2-1.png);
 }
 .card2-1:hover {
-  background-image: url(public/card2-1-hover.png);
+  background-image: url(assets/card2-1-hover.png);
 }
 .card2-2 {
-  background-image: url(public/card2-2.png);
+  background-image: url(assets/card2-2.png);
 }
 .card2-2:hover {
-  background-image: url(public/card2-2-hover.png);
+  background-image: url(assets/card2-2-hover.png);
 }
 .card2-3 {
-  background-image: url(public/card2-3.png);
+  background-image: url(assets/card2-3.png);
 }
 .card2-3:hover {
-  background-image: url(public/card2-3-hover.png);
+  background-image: url(assets/card2-3-hover.png);
 }
 .card2-4 {
-  background-image: url(public/card2-4.png);
+  background-image: url(assets/card2-4.png);
 }
 .card2-4:hover {
-  background-image: url(public/card2-4-hover.png);
+  background-image: url(assets/card2-4-hover.png);
 }
 .card2-5 {
-  background-image: url(public/card2-5.png);
+  background-image: url(assets/card2-5.png);
 }
 .card2-5:hover {
-  background-image: url(public/card2-5-hover.png);
+  background-image: url(assets/card2-5-hover.png);
 }
 .card2-6 {
-  background-image: url(public/card2-6.png);
+  background-image: url(assets/card2-6.png);
 }
 .card2-6:hover {
-  background-image: url(public/card2-6-hover.png);
+  background-image: url(assets/card2-6-hover.png);
 }
 .card2-7 {
-  background-image: url(public/card2-7.png);
+  background-image: url(assets/card2-7.png);
 }
 .card2-7:hover {
-  background-image: url(public/card2-7-hover.png);
+  background-image: url(assets/card2-7-hover.png);
 }
 .card2-8 {
-  background-image: url(public/card2-8.png);
+  background-image: url(assets/card2-8.png);
 }
 .card2-8:hover {
-  background-image: url(public/card2-8-hover.png);
+  background-image: url(assets/card2-8-hover.png);
 }
 .card-content {
   padding-bottom: 50px !important;
