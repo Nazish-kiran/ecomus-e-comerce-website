@@ -100,7 +100,32 @@ a:link {
   background-size: 95% 2px;
 }
 /* ------------NAVBAR ENDS HERE----------------*/
-
+/* ------------SIGN-IN MODAL STARTS HERE----------------*/
+.sign-in{
+  height: 400px !important;
+  padding: 37px 35px !important;
+  background-color: #fff;
+  width: 640px !important;
+  position: absolute;
+  left: 27%;
+  top: 25%;
+  z-index: 222;
+}
+.login-email, .login-pass{
+  padding: 15px 18px 15px !important;
+  height: 50px;
+  width: 100%;
+  border: 1px solid grey;
+  outline: 1px solid grey;
+}
+.block{
+  display: block !important;
+}
+.overlay{
+  overflow: hidden;
+  background-color: #000 !important;
+}
+/* ------------SING-IN MODAL ENDS HERE----------------*/
 /* ------------BANNER STARTS HERE----------------*/
 .banner {
   background-image: url(assets/fashion-slideshow-01.jpg);
