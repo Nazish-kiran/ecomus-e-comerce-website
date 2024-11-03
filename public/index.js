@@ -1,13 +1,21 @@
-import { app, auth, signInWithEmailAndPassword } from "./firebase.js";
+import {
+  app,
+  auth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  deleteUser,
+  user,
+} from "./firebase.js";
 
 let loginBtn = document.querySelector(".fa-user");
-let cross = document.querySelector("fa-xmark");
+let CrossBtn = document.querySelector(".fa-xmark");
+
 
 loginBtn.addEventListener("click", () => {
   Swal.fire({
     html: `<div class = "sign-in">
               <div class="signin-top d-flex justify-content-between" style="font-size:30px; color:black;">
-                   <h3 class="mb-5 text-start" style="font-size:28px; color:black;">Log In </h3>
+                   <h3 class="mb-5 text-start" style="font-size:28px; color:black;">Sign In </h3>
                    <i class="fa-solid fa-xmark cursor-pointer" id="close-modal"></i>
               </div>
               <input type="email" id="swal-input1" class="swal2-input login-email mb-4 small" placeholder="Email *">
@@ -16,7 +24,7 @@ loginBtn.addEventListener("click", () => {
            </div>`,
     focusConfirm: false,
     showDenyButton: true,
-    confirmButtonText: "Log in",
+    confirmButtonText: "Sign in",
     denyButtonText: `Log in With Google`,
     customClass: {
       popup: "custom-width-swal",
@@ -30,24 +38,60 @@ loginBtn.addEventListener("click", () => {
       return { email: email, password: password };
     },
   }).then((result) => {
-    if (result.isConfirmed) {
-      signInWithEmailAndPassword(
-        auth,
-        result.value.email,
-        result.value.password
-      )
+    if (result.value) {
+      const { email, password } = result.value;
+      createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          Swal.fire("Success!", "You are logged in!", "success");
+          console.log("User created:", userCredential);
+          var flag = true;
+          if (flag == true) {
+            loginBtn.addEventListener("click", () => {
+              console.log(777);
+              Swal.fire({
+                html: `
+              <div class = "sign-in">
+                <div class="signin-top d-flex justify-content-between" style="font-size:30px; color:black;">
+                   <h3 class="mb-5 text-start" style="font-size:28px; color:black;">Log Out </h3>
+                   <i class="fa-solid fa-xmark cursor-pointer" id="close-modal"></i>
+                </div>
+             </div>
+              `,
+                focusConfirm: false,
+                confirmButtonText: "log out",
+                customClass: {
+                  popup: "custom-width-swal",
+                },
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  const currentUser = auth.currentUser;
+                  if (currentUser) {
+                    deleteUser(currentUser)
+                      .then(() => {
+                        console.log("User deleted");
+                      })
+                      .catch((error) => {
+                        console.error("Error deleting user:", error.message);
+                      });
+                  } else {
+                    console.log("No user is currently authenticated");
+                  }
+                }
+              });
+            });
+          }
+          else{
+            console.log(777777);
+            
+          }
         })
         .catch((error) => {
-          Swal.fire("Error!", error.message);
+          console.error("Error creating user:", error.message);
+          Swal.fire("Error", error.message, "error");
         });
-    }
-  });
-  document.addEventListener("click", (event) => {
-    if (event.target.id === 'close-modal') {
-      Swal.close(); 
     }
   });
 });
 
+CrossBtn.addEventListener("click",()=>{
+  Swal
+})
