@@ -102,28 +102,51 @@ a:link {
 /* ------------NAVBAR ENDS HERE----------------*/
 /* ------------SIGN-IN MODAL STARTS HERE----------------*/
 .sign-in{
-  height: 400px !important;
-  padding: 37px 35px !important;
   background-color: #fff;
-  width: 640px !important;
-  position: absolute;
-  left: 27%;
-  top: 25%;
-  z-index: 222;
 }
-.login-email, .login-pass{
+.swal2-input{
   padding: 15px 18px 15px !important;
-  height: 50px;
+  height: 55px !important;
   width: 100%;
-  border: 1px solid grey;
-  outline: 1px solid grey;
+  border: 1px solid grey !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color:black !important;
 }
-.block{
-  display: block !important;
+.custom-width-swal{
+  width: 600px;
+  padding: 37px 35px !important;
 }
-.overlay{
-  overflow: hidden;
-  background-color: #000 !important;
+.swal2-confirm , .swal2-deny{
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 14px 24px !important;
+  font-weight: 500 !important;
+  font-size: 15px;
+  width: 250px;
+  justify-content: space-between;
+  margin-top: 30px !important;
+}
+.swal2-confirm{
+  background-color: #000;
+}
+.swal2-deny{
+  background-color: transparent;
+  border: 2px solid #000;
+  color: black;
+}
+.swal2-actions{
+  justify-content: initial !important;
+  gap: 30px;
+}
+.signin-btn-link{
+margin-right: 380px !important;
+}
+.signin-btn-link:hover{
+  color: var(--icon-hover) !important;
 }
 /* ------------SING-IN MODAL ENDS HERE----------------*/
 /* ------------BANNER STARTS HERE----------------*/
@@ -154,13 +177,21 @@ button {
   overflow: hidden;
   border: 0;
 }
+.sheen{
+  padding-block: 15px !important;
+  border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+}
 .sheen:after {
   content: "";
   position: absolute;
   top: -50%;
   right: -50%;
   bottom: -50%;
-  left: -50%;
+  left: -65%;
   background: linear-gradient(
     to bottom,
     rgba(229, 172, 142, 0),
