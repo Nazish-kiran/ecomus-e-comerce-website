@@ -4,12 +4,16 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   deleteUser,
+  GoogleAuthProvider,
+  provider,
+  signInWithPopup
 } from "./firebase.js";
 
+// DOM Elements
 let loginBtn = document.querySelector(".fa-user");
 
 // Check session storage to show the correct modal
-if (localStorage.getItem("isLoggedIn") === "true") {
+if (sessionStorage.getItem("isLoggedIn") === "true") {
   showLogoutModal();
 } else {
   loginBtn.addEventListener("click", showSignInModal);
@@ -43,19 +47,35 @@ function showSignInModal() {
       return { email: email, password: password };
     },
   }).then((result) => {
-    if (result.value) {
+    if (result.isConfirmed) {
       const { email, password } = result.value;
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           console.log("User created:", userCredential);
-        localStorage.setItem("isLoggedIn", "true");
-          showLogoutModal(); // Switch to logout modal after login
+          sessionStorage.setItem("isLoggedIn", "true");
+          showLogoutModal();  // Switch to logout modal after login
         })
         .catch((error) => {
           console.error("Error creating user:", error.message);
           Swal.fire("Error", error.message, "error");
         });
     }
+    else if (result.isDenied) {
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      const user = result.user;
+      console.log("User signed in with Google:", user);
+      sessionStorage.setItem("isLoggedIn", "true");
+      showLogoutModal(); // Switch to logout modal after successful login
+    })
+    .catch((error) => {
+      console.error("Error during Google Sign-In:", error.message);
+      Swal.fire("Error", "Failed to sign in with Google. Please try again.", "error")
+        .then(() => showSignInModal()); // Reopen the modal on error
+    });
+}
   });
   document.addEventListener("click", (event) => {
     if (event.target.id === "close-modal") {
