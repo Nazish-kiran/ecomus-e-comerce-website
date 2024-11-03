@@ -4,14 +4,19 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   deleteUser,
-  user,
 } from "./firebase.js";
 
 let loginBtn = document.querySelector(".fa-user");
-let CrossBtn = document.querySelector(".fa-xmark");
 
+// Check session storage to show the correct modal
+if (localStorage.getItem("isLoggedIn") === "true") {
+  showLogoutModal();
+} else {
+  loginBtn.addEventListener("click", showSignInModal);
+}
 
-loginBtn.addEventListener("click", () => {
+// Function to display the sign-in modal
+function showSignInModal() {
   Swal.fire({
     html: `<div class = "sign-in">
               <div class="signin-top d-flex justify-content-between" style="font-size:30px; color:black;">
@@ -43,46 +48,8 @@ loginBtn.addEventListener("click", () => {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           console.log("User created:", userCredential);
-          var flag = true;
-          if (flag == true) {
-            loginBtn.addEventListener("click", () => {
-              console.log(777);
-              Swal.fire({
-                html: `
-              <div class = "sign-in">
-                <div class="signin-top d-flex justify-content-between" style="font-size:30px; color:black;">
-                   <h3 class="mb-5 text-start" style="font-size:28px; color:black;">Log Out </h3>
-                   <i class="fa-solid fa-xmark cursor-pointer" id="close-modal"></i>
-                </div>
-             </div>
-              `,
-                focusConfirm: false,
-                confirmButtonText: "log out",
-                customClass: {
-                  popup: "custom-width-swal",
-                },
-              }).then((result) => {
-                if (result.isConfirmed) {
-                  const currentUser = auth.currentUser;
-                  if (currentUser) {
-                    deleteUser(currentUser)
-                      .then(() => {
-                        console.log("User deleted");
-                      })
-                      .catch((error) => {
-                        console.error("Error deleting user:", error.message);
-                      });
-                  } else {
-                    console.log("No user is currently authenticated");
-                  }
-                }
-              });
-            });
-          }
-          else{
-            console.log(777777);
-            
-          }
+        localStorage.setItem("isLoggedIn", "true");
+          showLogoutModal(); // Switch to logout modal after login
         })
         .catch((error) => {
           console.error("Error creating user:", error.message);
@@ -90,8 +57,46 @@ loginBtn.addEventListener("click", () => {
         });
     }
   });
-});
+  document.addEventListener("click", (event) => {
+    if (event.target.id === "close-modal") {
+      Swal.close();
+    }
+  });
+}
 
-CrossBtn.addEventListener("click",()=>{
-  Swal
-})
+// Function to display the logout modal
+function showLogoutModal() {
+  loginBtn.removeEventListener("click", showSignInModal); // Remove previous listener
+  loginBtn.addEventListener("click", () => {
+    Swal.fire({
+      html: `<div class = "sign-in">
+               <div class="signin-top d-flex justify-content-between" style="font-size:30px; color:black;">
+                  <h3 class="mb-5 text-start" style="font-size:28px; color:black;">Log Out </h3>
+                  <i class="fa-solid fa-xmark cursor-pointer" id="close-modal"></i>
+               </div>
+            </div>`,
+      focusConfirm: false,
+      confirmButtonText: "Log out",
+      customClass: {
+        popup: "custom-width-swal",
+      },
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+          deleteUser(currentUser)
+            .then(() => {
+              console.log("User deleted");
+              sessionStorage.setItem("isLoggedIn", "false");
+              loginBtn.addEventListener("click", showSignInModal); // Restore sign-in modal listener
+            })
+            .catch((error) => {
+              console.error("Error deleting user:", error.message);
+            });
+        } else {
+          console.log("No user is currently authenticated");
+        }
+      }
+    });
+  });
+}
